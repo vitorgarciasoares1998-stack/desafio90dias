@@ -12,9 +12,7 @@ h1{font-size:20px;font-weight:600;margin-bottom:4px}
 .subtitle{font-size:13px;color:#888;margin-bottom:12px}
 .sync-bar{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px 14px;background:#fff;border:1px solid #e8e8e6;border-radius:10px;font-size:12px;color:#888}
 .sync-dot{width:8px;height:8px;border-radius:50%;background:#ccc;flex-shrink:0;transition:background .3s}
-.sync-dot.ok{background:#1D9E75}
-.sync-dot.saving{background:#EF9F27}
-.sync-dot.err{background:#E24B4A}
+.sync-dot.ok{background:#1D9E75}.sync-dot.saving{background:#EF9F27}.sync-dot.err{background:#E24B4A}
 .sync-msg{flex:1}
 .inicio-bar{background:#fff;border:1px solid #e8e8e6;border-radius:12px;padding:14px 16px;margin-bottom:16px}
 .inicio-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -31,10 +29,11 @@ input[type=date]:focus{border-color:#aaa}
 .mv{font-size:22px;font-weight:600;color:#1a1a1a}
 .ms{font-size:11px;color:#888;margin-top:2px}
 .tab-bar{display:flex;border-bottom:1px solid #e8e8e6;margin-bottom:20px;overflow-x:auto}
-.tb{padding:10px 16px;font-size:13px;cursor:pointer;background:transparent;border:none;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;font-weight:500;white-space:nowrap}
+.tb{padding:10px 14px;font-size:13px;cursor:pointer;background:transparent;border:none;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:inherit;font-weight:500;white-space:nowrap}
 .tb.ap{color:#1a1a1a;border-bottom-color:#7F77DD}
 .tb.at{color:#1a1a1a;border-bottom-color:#1D9E75}
 .tb.al{color:#1a1a1a;border-bottom-color:#EF9F27}
+.tb.atr{color:#1a1a1a;border-bottom-color:#E24B4A}
 .tp{display:none}.tp.active{display:block}
 .stbar{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
 .st{padding:6px 14px;font-size:12px;cursor:pointer;background:transparent;border:1px solid #e8e8e6;border-radius:99px;color:#888;font-family:inherit;font-weight:500}
@@ -45,21 +44,20 @@ input[type=date]:focus{border-color:#aaa}
 .dc.dp{background:#7F77DD;border-color:#534AB7;color:#fff;font-weight:600}
 .dc.dt{background:#1D9E75;border-color:#0F6E56;color:#fff;font-weight:600}
 .dc.dl{background:#EF9F27;border-color:#BA7517;color:#fff;font-weight:600}
+.dc.dtr{background:#E24B4A;border-color:#A32D2D;color:#fff;font-weight:600}
 .dc:hover{border-color:#aaa}
 .pw{background:#f0f0ee;border-radius:99px;height:6px;margin-top:10px;overflow:hidden}
 .fp{height:100%;border-radius:99px;background:#7F77DD;transition:width .3s}
 .ft{height:100%;border-radius:99px;background:#1D9E75;transition:width .3s}
 .fl{height:100%;border-radius:99px;background:#EF9F27;transition:width .3s}
+.ftr{height:100%;border-radius:99px;background:#E24B4A;transition:width .3s}
 .wkr{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin-bottom:4px}
 .wk{font-size:8px;color:#bbb;text-align:center}
 .li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f0f0ee}
 .li:last-child{border-bottom:none}
-.dotp{width:8px;height:8px;border-radius:50%;background:#7F77DD;flex-shrink:0;margin-top:5px}
-.dott{width:8px;height:8px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:5px}
-.dotl{width:8px;height:8px;border-radius:50%;background:#EF9F27;flex-shrink:0;margin-top:5px}
-.dotc{width:16px;height:16px;border-radius:4px;border:1.5px solid #ccc;flex-shrink:0;margin-top:2px;cursor:pointer;background:transparent;display:flex;align-items:center;justify-content:center}
+.dotc{width:18px;height:18px;border-radius:4px;border:1.5px solid #ccc;flex-shrink:0;margin-top:1px;cursor:pointer;background:transparent;display:flex;align-items:center;justify-content:center}
 .dotc.checked{background:#1D9E75;border-color:#0F6E56}
-.dotc.checked::after{content:'✓';color:#fff;font-size:11px;font-weight:700}
+.dotc.checked::after{content:'✓';color:#fff;font-size:12px;font-weight:700}
 .lit{font-size:13px;color:#1a1a1a;flex:1;line-height:1.5}
 .lit.done{text-decoration:line-through;color:#aaa}
 .db{font-size:11px;color:#ccc;cursor:pointer;padding:2px 8px;border-radius:4px;border:1px solid transparent;flex-shrink:0}
@@ -71,7 +69,7 @@ input[type=text]:focus,input[type=number]:focus{border-color:#aaa}
 .btn{padding:8px 16px;border-radius:8px;border:1px solid #ccc;background:#fff;color:#1a1a1a;font-size:13px;cursor:pointer;margin-top:8px;font-family:inherit;font-weight:500}
 .btn:hover{background:#f5f5f3}
 .empty{font-size:13px;color:#bbb;padding:8px 0}
-.badge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#FAEEDA;color:#854F0B;margin-left:6px;font-weight:600}
+.badge-ok{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;background:#E1F5EE;color:#0F6E56;margin-left:6px;font-weight:600}
 .peso-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f0f0ee;flex-wrap:wrap}
 .peso-row:last-child{border-bottom:none}
 .peso-date{font-size:11px;color:#aaa;width:80px;flex-shrink:0}
@@ -79,24 +77,28 @@ input[type=text]:focus,input[type=number]:focus{border-color:#aaa}
 .tag-neg{font-size:12px;color:#0F6E56;background:#E1F5EE;padding:2px 8px;border-radius:99px;font-weight:600}
 .tag-pos{font-size:12px;color:#A32D2D;background:#FCEBEB;padding:2px 8px;border-radius:99px;font-weight:600}
 .tag-zero{font-size:12px;color:#888;background:#f5f5f3;padding:2px 8px;border-radius:99px}
-.streak{margin-top:6px;font-size:12px;color:#1D9E75;font-weight:500;min-height:18px}
-.livro-card{background:#fff;border:1px solid #e8e8e6;border-radius:12px;padding:14px;margin-bottom:10px}
-.livro-title{font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:4px}
-.livro-meta{font-size:11px;color:#aaa;margin-bottom:8px}
-.livro-resumo{font-size:13px;color:#555;line-height:1.5;white-space:pre-wrap}
-.paginas-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:99px;background:#FAEEDA;color:#854F0B;font-weight:600;margin-right:6px}
+.streak{margin-top:6px;font-size:12px;font-weight:500;min-height:18px}
+.progresso-metas{margin-bottom:12px}
+.progresso-barra-wrap{flex:1;background:#f0f0ee;border-radius:99px;height:6px;overflow:hidden}
+.progresso-barra{height:100%;border-radius:99px;background:#1D9E75;transition:width .3s}
+.dia-card{border:1px solid #e8e8e6;border-radius:10px;padding:14px;margin-bottom:10px;background:#fff}
+.dia-card-date{font-size:11px;color:#aaa;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.dia-card-texto{font-size:13px;color:#1a1a1a;line-height:1.6;white-space:pre-wrap}
+.tarefa-feita{color:#aaa;text-decoration:line-through}
+.emoji-humor{font-size:18px;margin-right:6px}
+.humor-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.humor-btn{padding:8px 12px;border-radius:8px;border:1px solid #e8e8e6;background:#fff;cursor:pointer;font-size:13px;font-family:inherit}
+.humor-btn.sel{border-color:#7F77DD;background:#EEEDFE;font-weight:600}
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Desafio 90 Dias</h1>
-  <p class="subtitle">Vida pessoal &amp; TikTok Shop &amp; Leitura</p>
-
+  <p class="subtitle">Vida pessoal &amp; TikTok Shop &amp; Leitura &amp; Treino</p>
   <div class="sync-bar">
     <div class="sync-dot" id="sync-dot"></div>
     <span class="sync-msg" id="sync-msg">Conectando...</span>
   </div>
-
   <div class="inicio-bar">
     <div class="inicio-row">
       <span class="inicio-label">Data de início do desafio:</span>
@@ -108,15 +110,16 @@ input[type=text]:focus,input[type=number]:focus{border-color:#aaa}
       <div class="inicio-chip">Término previsto<span id="data-fim">--</span></div>
     </div>
   </div>
-
   <div class="tab-bar">
     <button class="tb ap" id="mtb-p" onclick="switchMain('p')">Vida pessoal</button>
     <button class="tb" id="mtb-t" onclick="switchMain('t')">TikTok Shop</button>
     <button class="tb" id="mtb-l" onclick="switchMain('l')">Leitura</button>
+    <button class="tb" id="mtb-tr" onclick="switchMain('tr')">Treino</button>
   </div>
   <div id="mp-p" class="tp active"></div>
   <div id="mp-t" class="tp"></div>
   <div id="mp-l" class="tp"></div>
+  <div id="mp-tr" class="tp"></div>
 </div>
 
 <script>
@@ -126,48 +129,36 @@ const USER_ID='vitor_desafio90';
 
 let S={
   inicio:'',
-  p:{done:[],objs:[],objBig:'',metas:[],notas:[],semanas:[],pesos:[]},
-  t:{done:[],objs:[],objBig:'',metas:[],fat:[],notas:[],semanas:[]},
-  l:{done:[],leituras:[]}
+  p:{done:[],porque:'',metas:[],tarefas:[],diario:[],semanas:[],pesos:[]},
+  t:{done:[],porque:'',metas:[],tarefas:[],diario:[],fat:[],semanas:[]},
+  l:{done:[],leituras:[]},
+  tr:{done:[]}
 };
 let saveTimer=null;
 
-function setSyncStatus(status,msg){
-  document.getElementById('sync-dot').className='sync-dot '+status;
-  document.getElementById('sync-msg').textContent=msg;
-}
+function setSyncStatus(s,m){document.getElementById('sync-dot').className='sync-dot '+s;document.getElementById('sync-msg').textContent=m;}
 
 async function loadFromCloud(){
   try{
     setSyncStatus('saving','Carregando dados...');
-    const res=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=dados`,{
-      headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
-    });
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=dados`,{headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}});
     const json=await res.json();
-    if(json&&json.length>0&&json[0].dados){
-      S=JSON.parse(json[0].dados);
-      ensureDefaults();
-    }
+    if(json&&json.length>0&&json[0].dados){S=JSON.parse(json[0].dados);ensureDefaults();}
     setSyncStatus('ok','Sincronizado com a nuvem');
   }catch(e){
     setSyncStatus('err','Sem conexão — usando dados locais');
-    try{const ls=localStorage.getItem('d90v5');if(ls)S=JSON.parse(ls);}catch(e2){}
+    try{const ls=localStorage.getItem('d90v6');if(ls)S=JSON.parse(ls);}catch(e2){}
     ensureDefaults();
   }
-  if(S.inicio){
-    document.getElementById('data-inicio').value=S.inicio;
-    atualizarInfo();
-  }
-  build('p');build('t');buildLeitura();
+  if(S.inicio){document.getElementById('data-inicio').value=S.inicio;atualizarInfo();}
+  build('p');build('t');buildLeitura();buildTreino();
 }
 
 async function saveToCloud(){
   try{
     setSyncStatus('saving','Salvando...');
-    localStorage.setItem('d90v5',JSON.stringify(S));
-    const check=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=user_id`,{
-      headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}
-    });
+    localStorage.setItem('d90v6',JSON.stringify(S));
+    const check=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=user_id`,{headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}});
     const existing=await check.json();
     const method=existing&&existing.length>0?'PATCH':'POST';
     const url=method==='PATCH'?`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}`:`${SUPABASE_URL}/rest/v1/dados`;
@@ -175,27 +166,20 @@ async function saveToCloud(){
     await fetch(url,{method,headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body});
     const t=new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
     setSyncStatus('ok','Salvo às '+t+' — sincronizado');
-  }catch(e){
-    setSyncStatus('err','Erro ao salvar na nuvem');
-    localStorage.setItem('d90v5',JSON.stringify(S));
-  }
+  }catch(e){setSyncStatus('err','Erro ao salvar');localStorage.setItem('d90v6',JSON.stringify(S));}
 }
 
-function save(){
-  localStorage.setItem('d90v5',JSON.stringify(S));
-  clearTimeout(saveTimer);
-  saveTimer=setTimeout(saveToCloud,1500);
-}
+function save(){localStorage.setItem('d90v6',JSON.stringify(S));clearTimeout(saveTimer);saveTimer=setTimeout(saveToCloud,1500);}
 
 function ensureDefaults(){
   if(!S.inicio)S.inicio='';
   ['p','t'].forEach(k=>{
     if(!S[k])S[k]={};
     if(!S[k].metas)S[k].metas=[];
-    if(!S[k].notas)S[k].notas=[];
+    if(!S[k].tarefas)S[k].tarefas=[];
+    if(!S[k].diario)S[k].diario=S[k].notas||[];
     if(!S[k].semanas)S[k].semanas=[];
-    if(!S[k].objs)S[k].objs=[];
-    if(!S[k].objBig)S[k].objBig='';
+    if(!S[k].porque)S[k].porque=S[k].objBig||'';
     if(!S[k].done)S[k].done=[];
   });
   if(!S.t.fat)S.t.fat=[];
@@ -203,35 +187,32 @@ function ensureDefaults(){
   if(!S.l)S.l={done:[],leituras:[]};
   if(!S.l.done)S.l.done=[];
   if(!S.l.leituras)S.l.leituras=[];
+  if(!S.tr)S.tr={done:[]};
+  if(!S.tr.done)S.tr.done=[];
 }
 
-function salvarInicio(){
-  S.inicio=document.getElementById('data-inicio').value;
-  save();atualizarInfo();
-}
+function salvarInicio(){S.inicio=document.getElementById('data-inicio').value;save();atualizarInfo();}
 
 function atualizarInfo(){
   if(!S.inicio){document.getElementById('inicio-info').style.display='none';return;}
   const inicio=new Date(S.inicio+'T00:00:00');
-  const hoje=new Date();hoje.setHours(0,0,0,0);
-  const diff=Math.floor((hoje-inicio)/(1000*60*60*24));
-  const diaAtual=Math.max(1,Math.min(90,diff+1));
-  const restantes=Math.max(0,90-diff);
+  const hj=new Date();hj.setHours(0,0,0,0);
+  const diff=Math.floor((hj-inicio)/(1000*60*60*24));
+  document.getElementById('dia-atual').textContent='Dia '+Math.max(1,Math.min(90,diff+1));
+  document.getElementById('dias-restantes').textContent=Math.max(0,90-diff)+' dias';
   const fim=new Date(inicio);fim.setDate(fim.getDate()+89);
-  document.getElementById('dia-atual').textContent='Dia '+diaAtual;
-  document.getElementById('dias-restantes').textContent=restantes+' dias';
   document.getElementById('data-fim').textContent=fim.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});
   document.getElementById('inicio-info').style.display='flex';
 }
 
 function hoje(){return new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});}
+function ontem(){const d=new Date();d.setDate(d.getDate()-1);return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});}
 
 function switchMain(k){
   document.querySelectorAll('.tp').forEach(e=>e.classList.remove('active'));
-  document.querySelectorAll('.tb').forEach(e=>{e.classList.remove('ap');e.classList.remove('at');e.classList.remove('al');});
+  document.querySelectorAll('.tb').forEach(e=>{e.classList.remove('ap');e.classList.remove('at');e.classList.remove('al');e.classList.remove('atr');});
   document.getElementById('mp-'+k).classList.add('active');
-  const cls=k==='p'?'ap':k==='t'?'at':'al';
-  document.getElementById('mtb-'+k).classList.add(cls);
+  document.getElementById('mtb-'+k).classList.add(k==='p'?'ap':k==='t'?'at':k==='l'?'al':'atr');
 }
 
 function switchSub(k,s){
@@ -244,16 +225,18 @@ function switchSub(k,s){
 function build(k){
   const el=document.getElementById('mp-'+k);
   const isTk=k==='t';
+  const corBarra=isTk?'ft':'fp';
   el.innerHTML=`
     <div class="stbar">
-      <button class="st active" id="${k}-st-tracker" onclick="switchSub('${k}','tracker')">Desafio 90 dias</button>
-      <button class="st" id="${k}-st-objetivos" onclick="switchSub('${k}','objetivos')">Objetivos</button>
+      <button class="st active" id="${k}-st-tracker" onclick="switchSub('${k}','tracker')">Tracker</button>
       <button class="st" id="${k}-st-metas" onclick="switchSub('${k}','metas')">Metas</button>
       ${!isTk?`<button class="st" id="${k}-st-peso" onclick="switchSub('${k}','peso')">Peso</button>`:''}
-      <button class="st" id="${k}-st-notas" onclick="switchSub('${k}','notas')">Notas do dia</button>
+      <button class="st" id="${k}-st-tarefas" onclick="switchSub('${k}','tarefas')">Tarefas do dia</button>
+      <button class="st" id="${k}-st-diario" onclick="switchSub('${k}','diario')">Como foi meu dia</button>
       <button class="st" id="${k}-st-semana" onclick="switchSub('${k}','semana')">Resumo semanal</button>
       ${isTk?`<button class="st" id="${k}-st-fat" onclick="switchSub('${k}','fat')">Faturamento</button>`:''}
     </div>
+
     <div id="${k}-sp-tracker" class="sp active">
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px">
         <div class="mc"><div class="ml">Dias feitos</div><div class="mv" id="${k}-dn">0</div><div class="ms">de 90</div></div>
@@ -265,35 +248,32 @@ function build(k){
         <div class="sl">Tracker — toque para marcar o dia</div>
         <div class="wkr" id="${k}-wkl"></div>
         <div class="grid90" id="${k}-grid"></div>
-        <div class="pw"><div class="${isTk?'ft':'fp'}" id="${k}-bar" style="width:0%"></div></div>
-        <div class="streak" id="${k}-strk"></div>
+        <div class="pw"><div class="${corBarra}" id="${k}-bar" style="width:0%"></div></div>
+        <div class="streak" id="${k}-strk" style="color:${isTk?'#1D9E75':'#7F77DD'}"></div>
       </div>
     </div>
-    <div id="${k}-sp-objetivos" class="sp">
-      <div class="card">
-        <div class="sl">Por que você está fazendo esse desafio?</div>
-        <textarea id="${k}-obj-big" style="min-height:120px" placeholder="Escreva aqui o propósito desse desafio de 90 dias..."></textarea>
-        <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="saveObjBig('${k}')">Salvar</button></div>
-      </div>
-      <div class="card">
-        <div class="sl">Objetivos específicos</div>
-        <div id="${k}-obj-list"></div>
-        <div style="margin-top:12px">
-          <input type="text" id="${k}-obj-input" placeholder="${isTk?'Ex: Ter 6 contas ativas vendendo todo dia...':'Ex: Acordar às 6h, ler 10 páginas por dia...'}" style="margin-bottom:8px"/>
-          <button class="btn" onclick="addObj('${k}')">Adicionar objetivo</button>
-        </div>
-      </div>
-    </div>
+
     <div id="${k}-sp-metas" class="sp">
       <div class="card">
-        <div class="sl">Metas do desafio</div>
+        <div class="sl">Por que estou fazendo esse desafio?</div>
+        <div id="${k}-porque-exibe" style="margin-bottom:12px"></div>
+        <textarea id="${k}-porque-input" style="min-height:80px" placeholder="Escreva aqui o seu motivo. Isso vai te manter focado nos dias difíceis..."></textarea>
+        <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="salvarPorque('${k}')">Salvar</button></div>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+          <div class="sl" style="margin-bottom:0">Minhas metas</div>
+          <div id="${k}-prog-metas" style="font-size:12px;color:#888"></div>
+        </div>
+        <div style="background:#f0f0ee;border-radius:99px;height:6px;margin-bottom:14px;overflow:hidden"><div class="progresso-barra" id="${k}-barra-metas" style="width:0%"></div></div>
         <div id="${k}-meta-list"></div>
         <div style="margin-top:14px;border-top:1px solid #f0f0ee;padding-top:14px">
-          <input type="text" id="${k}-meta-input" placeholder="${isTk?'Ex: Fazer R$ 5.000 em 90 dias...':'Ex: Perder 5kg, ler 3 livros...'}" style="margin-bottom:8px"/>
+          <input type="text" id="${k}-meta-input" placeholder="${isTk?'Ex: Fazer R$ 5.000, ter 1000 seguidores por conta...':'Ex: Perder 8kg, treinar 6x na semana, zero açúcar...'}" style="margin-bottom:8px"/>
           <button class="btn" onclick="addMeta('${k}')">Adicionar meta</button>
         </div>
       </div>
     </div>
+
     ${!isTk?`
     <div id="${k}-sp-peso" class="sp">
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
@@ -315,23 +295,53 @@ function build(k){
         <div id="peso-list"></div>
       </div>
     </div>`:''}
-    <div id="${k}-sp-notas" class="sp">
+
+    <div id="${k}-sp-tarefas" class="sp">
       <div class="card">
-        <div class="sl">Observações e tarefas para amanhã</div>
-        <textarea id="${k}-nota-input" style="min-height:100px" placeholder="O que precisa ser feito amanhã? Alguma observação importante do dia de hoje?"></textarea>
-        <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="addNota('${k}')">Salvar nota</button></div>
+        <div class="sl">Tarefas de hoje</div>
+        <div id="${k}-tarefa-list"></div>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <input type="text" id="${k}-tarefa-input" placeholder="${isTk?'Ex: Postar nas 6 contas, responder comentários...':'Ex: Treinar, ler 10 páginas, beber 2L de água...'}"/>
+          <button class="btn" style="margin-top:0;white-space:nowrap" onclick="addTarefa('${k}')">+ Adicionar</button>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn" style="margin-top:0;font-size:12px;color:#aaa" onclick="limparTarefasConcluidas('${k}')">Limpar concluídas</button>
+        </div>
       </div>
-      <div class="card"><div class="sl">Notas salvas</div><div id="${k}-notas-list"></div></div>
     </div>
+
+    <div id="${k}-sp-diario" class="sp">
+      <div class="card">
+        <div class="sl">Como foi meu dia?</div>
+        <div style="margin-bottom:10px">
+          <div style="font-size:12px;color:#888;margin-bottom:6px">Escolha a data do dia que está descrevendo</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" id="${k}-btn-hoje" style="margin-top:0;font-size:12px" onclick="setDataDiario('${k}','hoje')">Hoje (${hoje()})</button>
+            <button class="btn" id="${k}-btn-ontem" style="margin-top:0;font-size:12px" onclick="setDataDiario('${k}','ontem')">Ontem (${ontem()})</button>
+            <input type="date" id="${k}-diario-data" style="padding:6px 10px;border:1px solid #e8e8e6;border-radius:8px;font-size:12px;color:#888;font-family:inherit;outline:none" onchange="setDataDiarioCustom('${k}')"/>
+          </div>
+          <div style="font-size:12px;color:#7F77DD;margin-top:6px;font-weight:500" id="${k}-data-selecionada">Data: ${hoje()}</div>
+        </div>
+        <div style="font-size:12px;color:#888;margin-bottom:6px">Como foi seu dia? O que funcionou? O que pode melhorar?</div>
+        <textarea id="${k}-diario-input" style="min-height:120px" placeholder="Escreva aqui como foi o seu dia..."></textarea>
+        <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="addDiario('${k}')">Salvar</button></div>
+      </div>
+      <div class="card">
+        <div class="sl">Histórico</div>
+        <div id="${k}-diario-list"></div>
+      </div>
+    </div>
+
     <div id="${k}-sp-semana" class="sp">
       <div class="card">
         <div class="sl">Como foi a semana?</div>
         <input type="text" id="${k}-sem-titulo" placeholder="Ex: Semana 1, Semana 2..." style="margin-bottom:8px"/>
-        <textarea id="${k}-sem-input" style="min-height:110px" placeholder="Escreva aqui como foi a semana, o que funcionou, o que pode melhorar..."></textarea>
+        <textarea id="${k}-sem-input" style="min-height:110px" placeholder="O que funcionou? O que pode melhorar? Como você se sentiu?"></textarea>
         <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="addSemana('${k}')">Salvar resumo</button></div>
       </div>
       <div class="card"><div class="sl">Resumos salvos</div><div id="${k}-sem-list"></div></div>
     </div>
+
     ${isTk?`
     <div id="${k}-sp-fat" class="sp">
       <div class="card">
@@ -352,124 +362,43 @@ function build(k){
       </div>
     </div>`:''}
   `;
-  renderGrid(k);renderObjs(k);renderMetas(k);renderNotas(k);renderSemanas(k);
+
+  renderGrid(k);renderMetas(k);renderNotas(k);renderDiario(k);renderSemanas(k);renderPorque(k);
   if(!isTk)renderPeso();
   if(isTk)renderFat();
-  const big=document.getElementById(k+'-obj-big');
-  if(big&&S[k].objBig)big.value=S[k].objBig;
+  const inp=document.getElementById(k+'-porque-input');
+  if(inp&&S[k].porque)inp.value=S[k].porque;
+
+  // data padrão = hoje
+  S[k]._dataDiario=hoje();
 }
 
-function buildLeitura(){
-  const el=document.getElementById('mp-l');
-  el.innerHTML=`
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
-      <div class="mc"><div class="ml">Dias lidos</div><div class="mv" id="l-dn">0</div><div class="ms">de 90</div></div>
-      <div class="mc"><div class="ml">Páginas lidas</div><div class="mv" id="l-pags">0</div><div class="ms">estimadas</div></div>
-      <div class="mc"><div class="ml">Progresso</div><div class="mv" id="l-pc">0%</div><div class="ms">concluído</div></div>
-    </div>
-    <div class="card">
-      <div class="sl">Tracker de leitura — toque para marcar o dia</div>
-      <div class="wkr" id="l-wkl"></div>
-      <div class="grid90" id="l-grid"></div>
-      <div class="pw"><div class="fl" id="l-bar" style="width:0%"></div></div>
-      <div class="streak" id="l-strk"></div>
-    </div>
-    <div class="card">
-      <div class="sl">Registrar leitura do dia</div>
-      <div style="margin-bottom:8px">
-        <div style="font-size:12px;color:#888;margin-bottom:4px">Livro / título</div>
-        <input type="text" id="l-livro" placeholder="Ex: Hábitos Atômicos, A Arte da Guerra..."/>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
-        <div>
-          <div style="font-size:12px;color:#888;margin-bottom:4px">Páginas lidas hoje</div>
-          <input type="number" id="l-pags-input" placeholder="Ex: 10" min="1"/>
-        </div>
-        <div>
-          <div style="font-size:12px;color:#888;margin-bottom:4px">Página que parou</div>
-          <input type="number" id="l-pagina-parou" placeholder="Ex: 85" min="1"/>
-        </div>
-      </div>
-      <div style="font-size:12px;color:#888;margin-bottom:4px">Resumo do que leu hoje</div>
-      <textarea id="l-resumo" style="min-height:100px" placeholder="Escreva aqui os pontos principais do que você leu hoje..."></textarea>
-      <button class="btn" onclick="addLeitura()">Salvar leitura</button>
-    </div>
-    <div class="card">
-      <div class="sl">Histórico de leituras</div>
-      <div id="l-lista"></div>
-    </div>
-  `;
-  renderGridLeitura();
-  renderLeituras();
+function setDataDiario(k,tipo){
+  S[k]._dataDiario=tipo==='hoje'?hoje():ontem();
+  document.getElementById(k+'-data-selecionada').textContent='Data: '+S[k]._dataDiario;
 }
 
-function renderGridLeitura(){
-  const wl=document.getElementById('l-wkl');if(!wl)return;
-  wl.innerHTML='';
-  for(let i=1;i<=10;i++){const d=document.createElement('div');d.className='wk';d.textContent='S'+i;wl.appendChild(d);}
-  const grid=document.getElementById('l-grid');grid.innerHTML='';
-  for(let i=1;i<=90;i++){
-    const c=document.createElement('div');
-    c.className='dc'+(S.l.done.includes(i)?' dl':'');
-    c.textContent=i;c.onclick=()=>toggleDayL(i);grid.appendChild(c);
-  }
-  const d=S.l.done.length;
-  const dn=document.getElementById('l-dn');if(dn)dn.textContent=d;
-  const pc=document.getElementById('l-pc');if(pc)pc.textContent=Math.round(d/90*100)+'%';
-  const bar=document.getElementById('l-bar');if(bar)bar.style.width=Math.round(d/90*100)+'%';
-  const pags=document.getElementById('l-pags');if(pags)pags.textContent=d*10;
-  const sorted=[...S.l.done].sort((a,b)=>a-b);let streak=0;
-  for(let i=sorted.length-1;i>=0;i--){if(i===sorted.length-1||sorted[i]===sorted[i+1]-1)streak++;else break;}
-  const strk=document.getElementById('l-strk');
-  if(strk)strk.textContent=streak>1?'🔥 '+streak+' dias lendo — continue assim!':'';
+function setDataDiarioCustom(k){
+  const val=document.getElementById(k+'-diario-data').value;
+  if(!val)return;
+  const d=new Date(val+'T00:00:00');
+  S[k]._dataDiario=d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});
+  document.getElementById(k+'-data-selecionada').textContent='Data: '+S[k]._dataDiario;
 }
 
-function toggleDayL(i){
-  if(S.l.done.includes(i))S.l.done=S.l.done.filter(x=>x!==i);else S.l.done.push(i);
-  save();renderGridLeitura();
-}
-
-function addLeitura(){
-  const livro=document.getElementById('l-livro').value.trim();
-  const pags=parseInt(document.getElementById('l-pags-input').value)||10;
-  const parou=document.getElementById('l-pagina-parou').value.trim();
-  const resumo=document.getElementById('l-resumo').value.trim();
-  if(!resumo)return;
-  S.l.leituras.push({date:hoje(),livro:livro||'Sem título',pags,parou,resumo});
-  document.getElementById('l-livro').value='';
-  document.getElementById('l-pags-input').value='';
-  document.getElementById('l-pagina-parou').value='';
-  document.getElementById('l-resumo').value='';
-  save();renderLeituras();
-}
-
-function renderLeituras(){
-  const el=document.getElementById('l-lista');if(!el)return;
-  if(!S.l.leituras.length){el.innerHTML='<div class="empty">Nenhuma leitura registrada ainda.</div>';return;}
-  el.innerHTML='';
-  [...S.l.leituras].reverse().forEach((l,ri)=>{
-    const i=S.l.leituras.length-1-ri;
-    const d=document.createElement('div');d.className='livro-card';
-    d.innerHTML=`
-      <div class="livro-title">${l.livro}</div>
-      <div class="livro-meta">
-        ${l.date}
-        <span class="paginas-badge">${l.pags} páginas</span>
-        ${l.parou?`<span style="font-size:11px;color:#aaa">parou na pág. ${l.parou}</span>`:''}
-      </div>
-      <div class="livro-resumo">${l.resumo}</div>
-      <div style="margin-top:8px"><span class="db" onclick="delLeitura(${i})">remover</span></div>
-    `;
-    el.appendChild(d);
-  });
-}
-
-function delLeitura(i){S.l.leituras.splice(i,1);save();renderLeituras();}
-
-function saveObjBig(k){
-  S[k].objBig=document.getElementById(k+'-obj-big').value;save();
-  const el=document.getElementById(k+'-obj-big');
+function salvarPorque(k){
+  S[k].porque=document.getElementById(k+'-porque-input').value;save();renderPorque(k);
+  const el=document.getElementById(k+'-porque-input');
   el.style.borderColor='#1D9E75';setTimeout(()=>{el.style.borderColor='';},1200);
+}
+
+function renderPorque(k){
+  const el=document.getElementById(k+'-porque-exibe');if(!el)return;
+  const txt=S[k].porque;
+  const cor=k==='p'?'#7F77DD':'#1D9E75';
+  if(txt){
+    el.innerHTML=`<div style="background:#f5f5f3;border-radius:10px;padding:14px;border-left:3px solid ${cor}"><div style="font-size:13px;color:#555;line-height:1.6;font-style:italic;white-space:pre-wrap">"${txt}"</div></div>`;
+  }else{el.innerHTML='';}
 }
 
 function renderGrid(k){
@@ -486,8 +415,7 @@ function renderGrid(k){
 }
 
 function toggleDay(k,i){
-  const d=S[k].done;
-  if(d.includes(i))S[k].done=d.filter(x=>x!==i);else S[k].done.push(i);
+  if(S[k].done.includes(i))S[k].done=S[k].done.filter(x=>x!==i);else S[k].done.push(i);
   save();renderGrid(k);
 }
 
@@ -503,33 +431,72 @@ function renderMetrics(k){
   g('strk').textContent=streak>1?'🔥 '+streak+' dias seguidos — continue assim!':'';
 }
 
-function renderObjs(k){
-  const el=document.getElementById(k+'-obj-list');if(!el)return;
-  const dot=k==='p'?'dotp':'dott';
-  if(!S[k].objs.length){el.innerHTML='<div class="empty">Nenhum objetivo ainda.</div>';return;}
-  el.innerHTML='';
-  S[k].objs.forEach((o,i)=>{
-    const r=document.createElement('div');r.className='li';
-    r.innerHTML=`<div class="${dot}"></div><div class="lit">${o}</div><div class="db" onclick="delObj('${k}',${i})">remover</div>`;
-    el.appendChild(r);
-  });
-}
-function addObj(k){const inp=document.getElementById(k+'-obj-input');const v=inp.value.trim();if(!v)return;S[k].objs.push(v);inp.value='';save();renderObjs(k);}
-function delObj(k,i){S[k].objs.splice(i,1);save();renderObjs(k);}
-
 function renderMetas(k){
   const el=document.getElementById(k+'-meta-list');if(!el)return;
-  if(!S[k].metas.length){el.innerHTML='<div class="empty">Nenhuma meta ainda.</div>';return;}
+  const total=S[k].metas.length;
+  const feitas=S[k].metas.filter(m=>m.done).length;
+  const prog=document.getElementById(k+'-prog-metas');
+  const barra=document.getElementById(k+'-barra-metas');
+  if(prog)prog.textContent=total?`${feitas} de ${total} concluídas`:'';
+  if(barra)barra.style.width=total?Math.round(feitas/total*100)+'%':'0%';
+  if(!total){el.innerHTML='<div class="empty">Nenhuma meta ainda.</div>';return;}
   el.innerHTML='';
   S[k].metas.forEach((m,i)=>{
     const r=document.createElement('div');r.className='li';
-    r.innerHTML=`<div class="dotc ${m.done?'checked':''}" onclick="toggleMeta('${k}',${i})"></div><div class="lit ${m.done?'done':''}">${m.text}${m.done?'<span class="badge">concluída</span>':''}</div><div class="db" onclick="delMeta('${k}',${i})">remover</div>`;
+    r.innerHTML=`<div class="dotc ${m.done?'checked':''}" onclick="toggleMeta('${k}',${i})"></div><div class="lit ${m.done?'done':''}">${m.text}${m.done?'<span class="badge-ok">concluída</span>':''}</div><div class="db" onclick="delMeta('${k}',${i})">remover</div>`;
     el.appendChild(r);
   });
 }
 function toggleMeta(k,i){S[k].metas[i].done=!S[k].metas[i].done;save();renderMetas(k);}
 function addMeta(k){const inp=document.getElementById(k+'-meta-input');const v=inp.value.trim();if(!v)return;S[k].metas.push({text:v,done:false});inp.value='';save();renderMetas(k);}
 function delMeta(k,i){S[k].metas.splice(i,1);save();renderMetas(k);}
+
+function renderNotas(k){
+  const el=document.getElementById(k+'-tarefa-list');if(!el)return;
+  if(!S[k].tarefas.length){el.innerHTML='<div class="empty">Nenhuma tarefa ainda. Adicione abaixo.</div>';return;}
+  el.innerHTML='';
+  S[k].tarefas.forEach((t,i)=>{
+    const r=document.createElement('div');r.className='li';
+    r.innerHTML=`<div class="dotc ${t.done?'checked':''}" onclick="toggleTarefa('${k}',${i})"></div><div class="lit ${t.done?'done':''}">${t.text}</div><div class="db" onclick="delTarefa('${k}',${i})">remover</div>`;
+    el.appendChild(r);
+  });
+}
+function addTarefa(k){
+  const inp=document.getElementById(k+'-tarefa-input');const v=inp.value.trim();if(!v)return;
+  S[k].tarefas.push({text:v,done:false});inp.value='';save();renderNotas(k);
+}
+function toggleTarefa(k,i){S[k].tarefas[i].done=!S[k].tarefas[i].done;save();renderNotas(k);}
+function delTarefa(k,i){S[k].tarefas.splice(i,1);save();renderNotas(k);}
+function limparTarefasConcluidas(k){S[k].tarefas=S[k].tarefas.filter(t=>!t.done);save();renderNotas(k);}
+
+function renderDiario(k){
+  const el=document.getElementById(k+'-diario-list');if(!el)return;
+  const lista=S[k].diario||[];
+  if(!lista.length){el.innerHTML='<div class="empty">Nenhum registro ainda.</div>';return;}
+  el.innerHTML='';
+  [...lista].reverse().forEach((d,ri)=>{
+    const i=lista.length-1-ri;
+    const card=document.createElement('div');card.className='dia-card';
+    card.innerHTML=`
+      <div class="dia-card-date">
+        <span style="font-weight:600;color:#888">${d.date}</span>
+        <span class="db" onclick="delDiario('${k}',${i})">remover</span>
+      </div>
+      <div class="dia-card-texto">${d.texto}</div>
+    `;
+    el.appendChild(card);
+  });
+}
+function addDiario(k){
+  const texto=document.getElementById(k+'-diario-input').value.trim();
+  if(!texto)return;
+  if(!S[k].diario)S[k].diario=[];
+  const data=S[k]._dataDiario||hoje();
+  S[k].diario.push({date:data,texto});
+  document.getElementById(k+'-diario-input').value='';
+  save();renderDiario(k);
+}
+function delDiario(k,i){S[k].diario.splice(i,1);save();renderDiario(k);}
 
 function renderPeso(){
   const pesos=S.p.pesos;
@@ -583,20 +550,6 @@ function addPeso(){
 }
 function delPeso(i){S.p.pesos.splice(i,1);save();renderPeso();}
 
-function renderNotas(k){
-  const el=document.getElementById(k+'-notas-list');if(!el)return;
-  if(!S[k].notas.length){el.innerHTML='<div class="empty">Nenhuma nota ainda.</div>';return;}
-  el.innerHTML='';
-  [...S[k].notas].reverse().forEach((n,ri)=>{
-    const i=S[k].notas.length-1-ri;
-    const d=document.createElement('div');d.className='li';d.style.flexDirection='column';d.style.alignItems='flex-start';
-    d.innerHTML=`<div style="font-size:11px;color:#aaa">${n.date}</div><div style="font-size:13px;color:#1a1a1a;line-height:1.5;white-space:pre-wrap;margin-top:4px">${n.text}</div><div style="margin-top:6px"><span class="db" onclick="delNota('${k}',${i})">remover</span></div>`;
-    el.appendChild(d);
-  });
-}
-function addNota(k){const inp=document.getElementById(k+'-nota-input');const v=inp.value.trim();if(!v)return;S[k].notas.push({date:hoje(),text:v});inp.value='';save();renderNotas(k);}
-function delNota(k,i){S[k].notas.splice(i,1);save();renderNotas(k);}
-
 function renderSemanas(k){
   const el=document.getElementById(k+'-sem-list');if(!el)return;
   if(!S[k].semanas.length){el.innerHTML='<div class="empty">Nenhum resumo ainda.</div>';return;}
@@ -634,6 +587,146 @@ function addFat(){
   S.t.fat.push({label:l,val:v});document.getElementById('fat-lbl').value='';document.getElementById('fat-vl').value='';save();renderFat();
 }
 function delFat(i){S.t.fat.splice(i,1);save();renderFat();}
+
+function buildLeitura(){
+  const el=document.getElementById('mp-l');
+  el.innerHTML=`
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
+      <div class="mc"><div class="ml">Dias lidos</div><div class="mv" id="l-dn">0</div><div class="ms">de 90</div></div>
+      <div class="mc"><div class="ml">Páginas lidas</div><div class="mv" id="l-pags">0</div><div class="ms">estimadas</div></div>
+      <div class="mc"><div class="ml">Progresso</div><div class="mv" id="l-pc">0%</div><div class="ms">concluído</div></div>
+    </div>
+    <div class="card">
+      <div class="sl">Tracker — toque para marcar o dia que leu</div>
+      <div class="wkr" id="l-wkl"></div>
+      <div class="grid90" id="l-grid"></div>
+      <div class="pw"><div class="fl" id="l-bar" style="width:0%"></div></div>
+      <div class="streak" id="l-strk" style="color:#EF9F27"></div>
+    </div>
+    <div class="card">
+      <div class="sl">Registrar leitura do dia</div>
+      <div style="margin-bottom:8px"><div style="font-size:12px;color:#888;margin-bottom:4px">Livro</div><input type="text" id="l-livro" placeholder="Ex: Hábitos Atômicos..."/></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <div><div style="font-size:12px;color:#888;margin-bottom:4px">Páginas lidas hoje</div><input type="number" id="l-pags-input" placeholder="Ex: 10" min="1"/></div>
+        <div><div style="font-size:12px;color:#888;margin-bottom:4px">Página que parou</div><input type="number" id="l-pagina-parou" placeholder="Ex: 85" min="1"/></div>
+      </div>
+      <div style="font-size:12px;color:#888;margin-bottom:4px">Resumo do que leu hoje</div>
+      <textarea id="l-resumo" style="min-height:100px" placeholder="Principais pontos do que você leu hoje..."></textarea>
+      <button class="btn" onclick="addLeitura()">Salvar leitura</button>
+    </div>
+    <div class="card"><div class="sl">Histórico de leituras</div><div id="l-lista"></div></div>
+  `;
+  renderGridLeitura();renderLeituras();
+}
+
+function renderGridLeitura(){
+  const wl=document.getElementById('l-wkl');if(!wl)return;
+  wl.innerHTML='';
+  for(let i=1;i<=10;i++){const d=document.createElement('div');d.className='wk';d.textContent='S'+i;wl.appendChild(d);}
+  const grid=document.getElementById('l-grid');grid.innerHTML='';
+  for(let i=1;i<=90;i++){
+    const c=document.createElement('div');
+    c.className='dc'+(S.l.done.includes(i)?' dl':'');
+    c.textContent=i;c.onclick=()=>toggleDayL(i);grid.appendChild(c);
+  }
+  const d=S.l.done.length;
+  const dn=document.getElementById('l-dn');if(dn)dn.textContent=d;
+  const pc=document.getElementById('l-pc');if(pc)pc.textContent=Math.round(d/90*100)+'%';
+  const bar=document.getElementById('l-bar');if(bar)bar.style.width=Math.round(d/90*100)+'%';
+  const pags=document.getElementById('l-pags');if(pags)pags.textContent=d*10;
+  const sorted=[...S.l.done].sort((a,b)=>a-b);let streak=0;
+  for(let i=sorted.length-1;i>=0;i--){if(i===sorted.length-1||sorted[i]===sorted[i+1]-1)streak++;else break;}
+  const strk=document.getElementById('l-strk');
+  if(strk)strk.textContent=streak>1?'🔥 '+streak+' dias lendo — continue assim!':'';
+}
+function toggleDayL(i){if(S.l.done.includes(i))S.l.done=S.l.done.filter(x=>x!==i);else S.l.done.push(i);save();renderGridLeitura();}
+function addLeitura(){
+  const livro=document.getElementById('l-livro').value.trim();
+  const pags=parseInt(document.getElementById('l-pags-input').value)||10;
+  const parou=document.getElementById('l-pagina-parou').value.trim();
+  const resumo=document.getElementById('l-resumo').value.trim();
+  if(!resumo)return;
+  S.l.leituras.push({date:hoje(),livro:livro||'Sem título',pags,parou,resumo});
+  document.getElementById('l-livro').value='';document.getElementById('l-pags-input').value='';
+  document.getElementById('l-pagina-parou').value='';document.getElementById('l-resumo').value='';
+  save();renderLeituras();
+}
+function renderLeituras(){
+  const el=document.getElementById('l-lista');if(!el)return;
+  if(!S.l.leituras.length){el.innerHTML='<div class="empty">Nenhuma leitura ainda.</div>';return;}
+  el.innerHTML='';
+  [...S.l.leituras].reverse().forEach((l,ri)=>{
+    const i=S.l.leituras.length-1-ri;
+    const d=document.createElement('div');
+    d.style.cssText='border:1px solid #e8e8e6;border-radius:10px;padding:14px;margin-bottom:10px;background:#fff';
+    d.innerHTML=`<div style="font-size:14px;font-weight:600;color:#1a1a1a;margin-bottom:4px">${l.livro}</div><div style="font-size:11px;color:#aaa;margin-bottom:8px">${l.date} &nbsp;<span style="background:#FAEEDA;color:#854F0B;padding:2px 8px;border-radius:99px;font-weight:600;font-size:11px">${l.pags} páginas</span>${l.parou?` &nbsp;<span style="color:#aaa;font-size:11px">parou na pág. ${l.parou}</span>`:''}</div><div style="font-size:13px;color:#555;line-height:1.5;white-space:pre-wrap">${l.resumo}</div><div style="margin-top:8px"><span class="db" onclick="delLeitura(${i})">remover</span></div>`;
+    el.appendChild(d);
+  });
+}
+function delLeitura(i){S.l.leituras.splice(i,1);save();renderLeituras();}
+
+function buildTreino(){
+  const el=document.getElementById('mp-tr');
+  el.innerHTML=`
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px">
+      <div class="mc"><div class="ml">Treinos feitos</div><div class="mv" id="tr-dn">0</div><div class="ms">de 90 dias</div></div>
+      <div class="mc"><div class="ml">Semana</div><div class="mv" id="tr-sem">1</div><div class="ms">de 13</div></div>
+      <div class="mc"><div class="ml">Progresso</div><div class="mv" id="tr-pc">0%</div><div class="ms">concluído</div></div>
+      <div class="mc"><div class="ml">Descanso</div><div class="mv" id="tr-desc">0</div><div class="ms">dias</div></div>
+    </div>
+    <div class="card">
+      <div class="sl">Tracker — toque para marcar o dia que treinou</div>
+      <div class="wkr" id="tr-wkl"></div>
+      <div class="grid90" id="tr-grid"></div>
+      <div class="pw"><div class="ftr" id="tr-bar" style="width:0%"></div></div>
+      <div class="streak" id="tr-strk" style="color:#E24B4A"></div>
+    </div>
+    <div class="card">
+      <div class="sl">Frequência por semana</div>
+      <div id="tr-semanas-grid"></div>
+    </div>
+  `;
+  renderGridTreino();renderSemanasTreino();
+}
+
+function renderGridTreino(){
+  const wl=document.getElementById('tr-wkl');if(!wl)return;
+  wl.innerHTML='';
+  for(let i=1;i<=10;i++){const d=document.createElement('div');d.className='wk';d.textContent='S'+i;wl.appendChild(d);}
+  const grid=document.getElementById('tr-grid');if(!grid)return;
+  grid.innerHTML='';
+  for(let i=1;i<=90;i++){
+    const c=document.createElement('div');
+    c.className='dc'+(S.tr.done.includes(i)?' dtr':'');
+    c.textContent=i;c.onclick=()=>toggleTreino(i);grid.appendChild(c);
+  }
+  const d=S.tr.done.length;
+  const dn=document.getElementById('tr-dn');if(dn)dn.textContent=d;
+  const sem=document.getElementById('tr-sem');if(sem)sem.textContent=Math.min(13,Math.ceil(Math.max(d,1)/7));
+  const pc=document.getElementById('tr-pc');if(pc)pc.textContent=Math.round(d/90*100)+'%';
+  const desc=document.getElementById('tr-desc');if(desc)desc.textContent=90-d;
+  const bar=document.getElementById('tr-bar');if(bar)bar.style.width=Math.round(d/90*100)+'%';
+  const sorted=[...S.tr.done].sort((a,b)=>a-b);let streak=0;
+  for(let i=sorted.length-1;i>=0;i--){if(i===sorted.length-1||sorted[i]===sorted[i+1]-1)streak++;else break;}
+  const strk=document.getElementById('tr-strk');
+  if(strk)strk.textContent=streak>1?'🔥 '+streak+' dias seguidos — bora!':'';
+}
+function renderSemanasTreino(){
+  const el=document.getElementById('tr-semanas-grid');if(!el)return;
+  el.innerHTML='';
+  for(let s=0;s<13;s++){
+    const inicio=s*7+1;const fim=Math.min(inicio+6,90);
+    const diasSemana=[];for(let d=inicio;d<=fim;d++)diasSemana.push(d);
+    const treinos=diasSemana.filter(d=>S.tr.done.includes(d)).length;
+    const cor=treinos>=6?'#1D9E75':treinos>=4?'#EF9F27':'#E24B4A';
+    const bg=treinos>=6?'#E1F5EE':treinos>=4?'#FAEEDA':'#FCEBEB';
+    const semEl=document.createElement('div');
+    semEl.style.cssText='display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f0f0ee';
+    semEl.innerHTML=`<div style="font-size:12px;color:#888;width:60px;flex-shrink:0">Sem ${s+1}</div><div style="display:flex;gap:3px;flex:1">${diasSemana.map(d=>`<div style="flex:1;height:20px;border-radius:3px;background:${S.tr.done.includes(d)?'#E24B4A':'#f0f0ee'};border:1px solid ${S.tr.done.includes(d)?'#A32D2D':'#e8e8e6'}" title="Dia ${d}"></div>`).join('')}${diasSemana.length<7?'<div style="flex:1"></div>'.repeat(7-diasSemana.length):''}</div><div style="font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:${bg};color:${cor};flex-shrink:0">${treinos}x</div>`;
+    el.appendChild(semEl);
+  }
+}
+function toggleTreino(i){if(S.tr.done.includes(i))S.tr.done=S.tr.done.filter(x=>x!==i);else S.tr.done.push(i);save();renderGridTreino();renderSemanasTreino();}
 
 loadFromCloud();
 </script>
