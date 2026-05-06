@@ -139,17 +139,39 @@ let saveTimer=null;
 function setSyncStatus(s,m){document.getElementById('sync-dot').className='sync-dot '+s;document.getElementById('sync-msg').textContent=m;}
 
 async function loadFromCloud(){
+  setSyncStatus('saving','Carregando dados...');
+  // Tenta carregar da nuvem
+  let cloudOk=false;
   try{
-    setSyncStatus('saving','Carregando dados...');
     const res=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=dados`,{headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}});
-    const json=await res.json();
-    if(json&&json.length>0&&json[0].dados){S=JSON.parse(json[0].dados);ensureDefaults();}
-    setSyncStatus('ok','Sincronizado com a nuvem');
-  }catch(e){
-    setSyncStatus('err','Sem conexão — usando dados locais');
-    try{const ls=localStorage.getItem('d90v6');if(ls)S=JSON.parse(ls);}catch(e2){}
-    ensureDefaults();
+    if(res.ok){
+      const json=await res.json();
+      if(json&&json.length>0&&json[0].dados){
+        const parsed=JSON.parse(json[0].dados);
+        S=parsed;
+        ensureDefaults();
+        // Atualiza cache local com dados da nuvem
+        localStorage.setItem('d90v6',JSON.stringify(S));
+        cloudOk=true;
+      }
+    }
+  }catch(e){cloudOk=false;}
+
+  if(!cloudOk){
+    // Tenta cache local novo, depois tenta migrar do antigo
+    try{
+      const ls6=localStorage.getItem('d90v6');
+      if(ls6){S=JSON.parse(ls6);ensureDefaults();}
+      else{
+        const ls5=localStorage.getItem('d90v5');
+        if(ls5){S=JSON.parse(ls5);ensureDefaults();save();}
+      }
+    }catch(e2){}
+    setSyncStatus('err','Sem conexão — dados locais');
+  } else {
+    setSyncStatus('ok','Sincronizado — '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}));
   }
+
   if(S.inicio){document.getElementById('data-inicio').value=S.inicio;atualizarInfo();}
   build('p');build('t');buildLeitura();buildTreino();
 }
@@ -159,14 +181,16 @@ async function saveToCloud(){
     setSyncStatus('saving','Salvando...');
     localStorage.setItem('d90v6',JSON.stringify(S));
     const check=await fetch(`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}&select=user_id`,{headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY}});
+    if(!check.ok)throw new Error('check failed');
     const existing=await check.json();
     const method=existing&&existing.length>0?'PATCH':'POST';
     const url=method==='PATCH'?`${SUPABASE_URL}/rest/v1/dados?user_id=eq.${USER_ID}`:`${SUPABASE_URL}/rest/v1/dados`;
     const body=method==='PATCH'?JSON.stringify({dados:JSON.stringify(S)}):JSON.stringify({user_id:USER_ID,dados:JSON.stringify(S)});
-    await fetch(url,{method,headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body});
+    const resp=await fetch(url,{method,headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body});
+    if(!resp.ok)throw new Error('save failed');
     const t=new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
-    setSyncStatus('ok','Salvo às '+t+' — sincronizado');
-  }catch(e){setSyncStatus('err','Erro ao salvar');localStorage.setItem('d90v6',JSON.stringify(S));}
+    setSyncStatus('ok','Salvo às '+t+' — sincronizado ✓');
+  }catch(e){setSyncStatus('err','Erro ao salvar na nuvem');localStorage.setItem('d90v6',JSON.stringify(S));}
 }
 
 function save(){localStorage.setItem('d90v6',JSON.stringify(S));clearTimeout(saveTimer);saveTimer=setTimeout(saveToCloud,1500);}
