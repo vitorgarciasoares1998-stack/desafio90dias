@@ -518,7 +518,10 @@ function addDiario(k){
   const data=S[k]._dataDiario||hoje();
   S[k].diario.push({date:data,texto});
   document.getElementById(k+'-diario-input').value='';
-  save();renderDiario(k);
+  localStorage.setItem('d90v6',JSON.stringify(S));
+  clearTimeout(saveTimer);
+  saveToCloud();
+  renderDiario(k);
 }
 function delDiario(k,i){S[k].diario.splice(i,1);save();renderDiario(k);}
 
